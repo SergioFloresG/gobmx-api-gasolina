@@ -28,29 +28,30 @@ El archivo utilizado en el ejemplo se generó el 2019-06-07.
 - [Vue](https://vuejs.org/)
 - [Font Awesome 5.9](https://fontawesome.com/)
 
-## Ejecutar
+### Ejecutar
+ 
+ 1. Descargar la rama _master_.
+ 1. Ejecutar ``composer install --no-dev``
+ 1. Ejecutar ``cp .env.example .env``
+ 1. Configurar la conexión de la base de datos.(Ver abajo)
+ 1. Ejecutar `` php artisan migrate --seed`` para generar las tablas y cargar los códigos postales.
+ 1. Ejecutar ``php artisan serve``
+ 
+ ### Configurar base de datos
+    
+ El en archivo ``.env`` cambiar los datos de conexión a la base de datos
+ 
+ ````
+ DB_CONNECTION=mysql
+ DB_HOST=127.0.0.1
+ DB_PORT=3306
+ DB_DATABASE=homestead
+ DB_USERNAME=homestead
+ DB_PASSWORD=secret
+ ````
+ 
+ La base de datos debe de existir previamente.
 
-1. Descargar la rama _master_.
-1. Ejecutar ``composer install --no-dev``
-1. Ejecutar ``cp .env.example .env``
-1. Configurar la conexion de la base de datos.(Ver abajo)
-1. Ejecutar ``php artisan db:seed`` para cargar los codigos postales.
-1. Ejecutar ``php artisan serve``
-
-### Configurar base de datos
-   
-El en archivo ``.env`` cambiar los datos de conexion a la base de datos
-
-````
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=homestead
-DB_USERNAME=homestead
-DB_PASSWORD=secret
-````
-
-La base de datos debe de exitir previamente.
 
 ## Licencia
 Software de código abierto licenciado bajo [MIT license](https://opensource.org/licenses/MIT).
