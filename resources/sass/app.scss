@@ -1,0 +1,14 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+}
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap-vue/dist/bootstrap-vue.css";
+@import '~leaflet/dist/leaflet.css';
